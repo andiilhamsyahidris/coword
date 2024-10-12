@@ -93,7 +93,7 @@ class _CowordTypeState extends State<CowordType> with TickerProviderStateMixin {
                 : widget.cowordStyle.unmatchedColor,
           )
         : BoxDecoration(
-            shape: BoxShape.circle,
+            shape: BoxShape.rectangle,
 
             /// When password and confirmation password is match, we have to set color of the shape is [matchedColor]. Otherwise, set color of the shape is [unmatchedColor] if match is false
             color: widget.match!

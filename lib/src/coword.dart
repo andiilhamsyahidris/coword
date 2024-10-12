@@ -42,47 +42,67 @@ class Coword extends StatefulWidget {
 }
 
 class _CowordState extends State<Coword> {
-  final List<bool> _charComparisonResult = [];
+  List<bool> _charComparisonResult = [];
+  String confirmPassword = '';
+  int numberBullet = 0;
 
   @override
   void initState() {
+    widget.confirmationPasswordController.addListener(
+      () {
+        setState(() {
+          confirmPassword = widget.confirmationPasswordController.text.trim();
+        });
+        _compareCharPassword(confirmPassword);
+      },
+    );
     super.initState();
-    _compareCharPassword();
+  }
+
+  @override
+  void didUpdateWidget(covariant Coword oldWidget) {
+    widget.confirmationPasswordController.addListener(() {
+      setState(() {
+        confirmPassword = widget.confirmationPasswordController.text.trim();
+      });
+      _compareCharPassword(confirmPassword);
+    });
+    super.didUpdateWidget(oldWidget);
   }
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
-      children: List.generate(
-        _charComparisonResult.length,
-        (index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: CowordType(
-              type: widget.type,
-              cowordAnimation: widget.cowordAnimation,
-              cowordStyle: widget.cowordStyle,
-              match: _charComparisonResult[index],
-            ),
-          );
-        },
-      ),
+      children: List.generate(numberBullet, (index) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8),
+          child: CowordType(
+            type: widget.type,
+            cowordAnimation: widget.cowordAnimation,
+            cowordStyle: widget.cowordStyle,
+            match: _charComparisonResult[index],
+          ),
+        );
+      }),
     );
   }
 
-  void _compareCharPassword() {
+  void _compareCharPassword(String confirmPassword) {
     String password = widget.passwordController.text.trim();
-    String confirmPassword = widget.confirmationPasswordController.text.trim();
 
+    List<bool> comparisonResult = [];
     int minLength = password.length < confirmPassword.length
         ? password.length
         : confirmPassword.length;
 
     for (int i = 0; i < minLength; i++) {
-      setState(() {
-        _charComparisonResult.add(password[i] == confirmPassword[i]);
-      });
+      comparisonResult.add(password[i] == confirmPassword[i]);
     }
+
+    setState(() {
+      _charComparisonResult = comparisonResult;
+      numberBullet = minLength;
+    });
   }
 }
