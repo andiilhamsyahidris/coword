@@ -22,7 +22,7 @@ Coword(
 ## Types
 ### Dots Type
 
-<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/showcase.gif?raw=true" height="300px">
+<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/showcase.gif?raw=true" height="200px">
 
 ```dart
 Coword(
@@ -34,7 +34,7 @@ Coword(
 
 ### Rectangle Type
 
-<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/type.gif?raw=true" height="300px">
+<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/type.gif?raw=true" height="200px">
 
 ```dart
 Coword(
@@ -47,7 +47,7 @@ Coword(
 ## Animations
 ### Fade Animation
 
-<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/showcase.gif?raw=true" height="300px">
+<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/showcase.gif?raw=true" height="200px">
 
 ```dart
 Coword(
@@ -63,7 +63,7 @@ Coword(
 ```
 ### Scale Animation
 
-<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/scale.gif?raw=true" height="300px">
+<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/scale.gif?raw=true" height="200px">
 
 ```dart
 Coword(
@@ -82,7 +82,7 @@ Coword(
 ## Colors
 ### Match Color
 
-<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/matched.gif?raw=true" height="300px">
+<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/matched.gif?raw=true" height="200px">
 
 ```dart
 Coword(
@@ -96,7 +96,7 @@ Coword(
 
 ### Unmatch Color
 
-<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/unmatched.gif?raw=true" height="300px">
+<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/unmatched.gif?raw=true" height="200px">
 
 ```dart
 Coword(
