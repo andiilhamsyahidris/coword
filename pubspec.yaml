@@ -1,5 +1,5 @@
 name: coword
-description: "A new Flutter package project."
+description: "A package for creating widget to validate confirm password."
 version: 0.0.1
 homepage:
 
@@ -10,8 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  google_fonts: ^6.2.0
 
 dev_dependencies:
   flutter_test:
