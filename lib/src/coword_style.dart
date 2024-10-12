@@ -10,13 +10,8 @@ class CowordStyle {
   /// Default value is [Colors.red]
   final Color unmatchedColor;
 
-  /// Allows to set the size of [cowords.Coword] widget
-  /// Default value is 8
-  final double size;
-
   const CowordStyle({
     this.matchedColor = Colors.green,
     this.unmatchedColor = Colors.red,
-    this.size = 8,
   });
 }

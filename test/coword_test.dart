@@ -97,7 +97,6 @@ void main() {
       // Coword style value
       expect(cowordWidget.cowordStyle.matchedColor, Colors.green);
       expect(cowordWidget.cowordStyle.unmatchedColor, Colors.red);
-      expect(cowordWidget.cowordStyle.size, 8);
 
       // Coword animation value
       expect(cowordWidget.cowordAnimation.toAnimate, true);

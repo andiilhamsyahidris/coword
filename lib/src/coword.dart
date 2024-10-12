@@ -75,13 +75,15 @@ class _CowordState extends State<Coword> {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: List.generate(numberBullet, (index) {
-        return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8),
-          child: CowordType(
-            type: widget.type,
-            cowordAnimation: widget.cowordAnimation,
-            cowordStyle: widget.cowordStyle,
-            match: _charComparisonResult[index],
+        return Flexible(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 2),
+            child: CowordType(
+              type: widget.type,
+              cowordAnimation: widget.cowordAnimation,
+              cowordStyle: widget.cowordStyle,
+              match: _charComparisonResult[index],
+            ),
           ),
         );
       }),

@@ -113,8 +113,8 @@ class _CowordTypeState extends State<CowordType> with TickerProviderStateMixin {
             child: Material(
               type: MaterialType.transparency,
               child: Container(
-                width: widget.cowordStyle.size,
-                height: widget.cowordStyle.size,
+                width: 8,
+                height: 8,
                 decoration: shape,
               ),
             ),
