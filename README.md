@@ -1,39 +1,109 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+<p align="center">
+  <img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/showcase.gif?raw=true" height="300px">
+</p>
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+## Installing:
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+In your pubspec.yaml
+```yaml
+dependencies:
+  coword: latest_version
 ```
 
-## Additional information
+## Basic Usage
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+Coword(
+    passwordController: passwordController,
+    confirmationPasswordController: confirmationPasswordController,
+),
+```
+
+## Types
+### Dots Type
+
+<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/showcase.gif?raw=true" height="300px">
+
+```dart
+Coword(
+    passwordController: passwordController,
+    confirmationPasswordController: confirmationPasswordController,
+    type: CowordTypes.dots,
+),
+```
+
+### Rectangle Type
+
+<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/type.gif?raw=true" height="300px">
+
+```dart
+Coword(
+    passwordController: passwordController,
+    confirmationPasswordController: confirmationPasswordController,
+    type: CowordTypes.rectangle,
+),
+```
+
+## Animations
+### Fade Animation
+
+<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/showcase.gif?raw=true" height="300px">
+
+```dart
+Coword(
+    passwordController: passwordController,
+    confirmationPasswordController: confirmationPasswordController,
+    cowordAnimation: const CowordAnimation.fade(
+        toAnimate: true,
+        animationDuration: Duration(milliseconds: 500),
+        disappearanceFadeAnimationDuration: Duration(milliseconds: 200),
+        curve: Curves.easeOutCubic,
+    ),
+),
+```
+### Scale Animation
+
+<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/scale.gif?raw=true" height="300px">
+
+```dart
+Coword(
+    passwordController: passwordController,
+    confirmationPasswordController: confirmationPasswordController,
+    cowordAnimation: const CowordAnimation.scale(
+        toAnimate: true,
+        animationDuration: Duration(milliseconds: 500),
+        disappearanceFadeAnimationDuration: Duration(milliseconds: 200),
+        curve: Curves.easeOutCubic,
+        appearanceDisappearanceFadeAnimationEnabled: true,
+    ),
+),
+```
+
+## Colors
+### Match Color
+
+<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/matched.gif?raw=true" height="300px">
+
+```dart
+Coword(
+    passwordController: passwordController,
+    confirmationPasswordController: confirmationPasswordController,
+    cowordStyle: const CowordStyle(
+        matchedColor: Colors.blue,
+    ),
+),
+```
+
+### Unmatch Color
+
+<img src="https://github.com/andiilhamsyahidris/coword/blob/main/images/unmatched.gif?raw=true" height="300px">
+
+```dart
+Coword(
+    passwordController: passwordController,
+    confirmationPasswordController: confirmationPasswordController,
+    cowordStyle: const CowordStyle(
+        unmatchedColor: Colors.purple,
+    ),
+),
+```
