@@ -1,3 +1,3 @@
-## 0.0.1
+## 1.0.0 - [October 12, 2024]
 
-* TODO: Describe initial release.
+* Coword class for creating validate confirm password
