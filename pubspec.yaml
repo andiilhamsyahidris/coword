@@ -1,7 +1,8 @@
 name: coword
-description: "A package for creating widget to validate confirm password."
-version: 0.0.1
-homepage:
+description: "A package for creating widget to validate confirm password. Coword can be used for the confirmed password entered for each character is correct or not"
+version: 1.0.0
+repository: https://github.com/andiilhamsyahidris/coword
+issue_tracker: https://github.com/andiilhamsyahidris/coword/issues
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
